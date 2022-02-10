@@ -29,7 +29,7 @@ jobs:
     # XTERM used for better catkin_make output
     machine:
       image: ubuntu-2004:202111-02
-      user: carma
+      #user: carma
       environment:
         TERM: xterm
         INIT_ENV: /home/carma/.base-image/init-env.sh
