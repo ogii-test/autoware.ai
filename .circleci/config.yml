@@ -27,13 +27,13 @@ jobs:
   build:
     # Pull docker image from docker hub
     # XTERM used for better catkin_make output
-    docker:
-      - image: usdotfhwastoldev/carma-base:develop
-        user: carma
-        environment:
-          TERM: xterm
-          INIT_ENV: /home/carma/.base-image/init-env.sh
-          COVERAGE_FLAGS: -g --coverage -fprofile-arcs -ftest-coverage -Wall
+    machine:
+      image: ubuntu-2004:202111-02
+      user: carma
+      environment:
+        TERM: xterm
+        INIT_ENV: /home/carma/.base-image/init-env.sh
+        COVERAGE_FLAGS: -g --coverage -fprofile-arcs -ftest-coverage -Wall
     resource_class: large      
     # Set working directory
     working_directory: "/opt/carma/"
